@@ -9,3 +9,6 @@ def index(request):
         'latest_poll_list': latest_poll_list,
     })
     return HttpResponse(t.render(c))
+
+def detail(request, poll_id):
+  return HttpResponse("You're looking at poll %s." % poll_id)
